@@ -91,6 +91,11 @@
             key-positions = <20 21>;
             bindings = <&kp SEMICOLON>;
         };
+        combo_adjust {
+            timeout-ms = <200>;
+            key-positions = <31 32>;
+            bindings = <&mo 4 >;
+        };
     };
 
     behaviors {
