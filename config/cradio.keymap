@@ -46,30 +46,10 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_jk {
-            timeout-ms = <100>;
-            key-positions = <22 23>;
-            bindings = <&kp ESC>;
-        };
         combo_qj {
             timeout-ms = <100>;
             key-positions = <21 22>;
             bindings = <&kp ESC>;
-        };
-        combo_esc {
-            timeout-ms = <100>;
-            key-positions = <10 11>;
-            bindings = <&kp ESC>;
-        };
-        combo_delete_word {
-            timeout-ms = <100>;
-            key-positions = <8 9>;
-            bindings = <&kp LC(BSPC)>;
-        };
-        combo_delete {
-            timeout-ms = <150>;
-            key-positions = <9 19>;
-            bindings = <&kp BSPC>;
         };
         combo_slsh {
             timeout-ms = <100>;
@@ -78,18 +58,8 @@
         };
         combo_enter {
             timeout-ms = <100>;
-            key-positions = <16 18>;
-            bindings = <&mt 3 ENTER>;
-        };
-        combo_enter_alt {
-            timeout-ms = <130>;
             key-positions = <17 18>;
-            bindings = <&kp ENTER>;
-        };
-        combo_shift {
-            timeout-ms = <100>;
-            key-positions = <30 33>;
-            bindings = <&kp LSHIFT>;
+            bindings = <&mt 3 ENTER>;
         };
         combo_scln {
             timeout-ms = <100>;
@@ -97,9 +67,9 @@
             bindings = <&kp SEMICOLON>;
         };
         combo_adjust {
-            timeout-ms = <200>;
+            timeout-ms = <250>;
             key-positions = <30 33>;
-            bindings = <&mo 4 >;
+            bindings = <&mo 4>;
         };
     };
 
@@ -154,7 +124,7 @@
             >;
         };
 
-        tri_layer {
+        symbols {
             bindings = <
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT       &kp CARET  &kp AMPS   &kp STAR   &kp LPAR  &kp RPAR
             &trans     &trans     &trans     &trans    &trans          &trans     &trans     &trans     &kp LBRC  &kp RBRC
