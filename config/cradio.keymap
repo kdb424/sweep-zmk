@@ -59,7 +59,7 @@
         combo_enter {
             timeout-ms = <100>;
             key-positions = <17 18>;
-            bindings = <&mt 3 ENTER>;
+            bindings = <&lt 3 ENTER>;
         };
         combo_scln {
             timeout-ms = <100>;
