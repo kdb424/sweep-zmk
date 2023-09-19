@@ -61,6 +61,11 @@
             key-positions = <17 18>;
             bindings = <&lt 3 ENTER>;
         };
+        combo_oppositea_enter {
+            timeout-ms = <100>;
+            key-positions = <11 12>;
+            bindings = <&mo 3>;
+        };
         combo_scln {
             timeout-ms = <100>;
             key-positions = <20 21>;
@@ -69,7 +74,7 @@
         combo_adjust {
             timeout-ms = <250>;
             key-positions = <30 33>;
-            bindings = <&mo 4>;
+            bindings = <&mo 3>;
         };
     };
 
@@ -99,10 +104,10 @@
 
         lower {
             bindings = <
-            &trans     &trans     &trans     &trans     &bt BT_SEL 0   &trans     &kp N7     &kp N8     &kp N9     &kp DEL
-            &trans     &trans     &trans     &trans     &bt BT_SEL 1   &trans     &kp N4     &kp N5     &kp N6     &kp BSLH
-            &kp SEMI   &trans     &trans     &bt BT_CLR &bt BT_SEL 2   &trans     &kp N1     &kp N2     &kp N3     &kp MINUS
-                                             &trans     &trans         &kp EQUAL  &kp N0
+            &bt BT_CLR &bootloader &trans     &trans     &bt BT_SEL 0   &trans     &kp N7     &kp N8     &kp N9     &kp DEL
+            &kp LG(N1) &kp LG(N2)  &kp LG(N3) &kp LG(N4) &bt BT_SEL 1   &kp PIPE   &kp N4     &kp N5     &kp N6     &kp BSLH
+            &kp LG(N5) &kp LG(N6)  &kp LG(N7) &kp LG(N8) &bt BT_SEL 2   &kp UNDER  &kp N1     &kp N2     &kp N3     &kp MINUS
+                                              &trans     &trans         &kp EQUAL  &kp N0
             >;
         };
 
@@ -110,16 +115,7 @@
             bindings = <
             &kp F9     &kp F10    &kp F11    &kp F12    &trans         &trans     &trans     &key_repeat &kp LS(INS) &kp DEL
             &kp F5     &kp F6     &kp F7     &kp F8     &kp GRAVE      &kp HOME   &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT
-            &kp F1     &kp F2     &kp F3     &kp F4     &kp TILDE      &trans     &trans     &trans      &trans      &trans
-                                             &trans     &trans         &trans     &trans
-            >;
-        };
-
-        gui {
-            bindings = <
-            &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
-            &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &trans         &trans     &trans     &trans     &trans     &trans
-            &kp LG(N5) &kp LG(N6) &kp LG(N7) &kp LG(N8) &bootloader    &trans     &trans     &trans     &trans     &trans
+            &kp F1     &kp F2     &kp F3     &kp F4     &kp TILDE      &trans     &trans     &trans      &trans      &kp SEMI
                                              &trans     &trans         &trans     &trans
             >;
         };
@@ -128,8 +124,8 @@
             bindings = <
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR  &kp PRCNT       &kp CARET  &kp AMPS   &kp STAR   &kp LPAR  &kp RPAR
             &trans     &trans     &trans     &trans    &trans          &trans     &trans     &trans     &kp LBRC  &kp RBRC
-            &trans     &trans     &trans     &trans    &trans          &trans     &trans     &trans     &trans     &trans
-                                             &trans    &trans          &trans     &trans
+            &trans     &trans     &trans     &trans    &trans          &trans     &trans     &trans     &trans    &kp QMARK
+                                             &trans    &trans          &kp FSLH   &trans
             >;
         };
     };
