@@ -24,6 +24,12 @@ ZMK_BEHAVIOR(hrm, hold_tap,
     bindings = <&kp>, <&kp>;
 )
 
+// tap: colon | shft + tap: semicolon
+ZMK_BEHAVIOR(uncolon, mod_morph,
+    bindings = <&kp COLON>, <&kp SEMICOLON>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
 //ZMK_COMBO(name, bindings, keypos, layers, timeout)
 ZMK_COMBO(combo_esc, &kp ESC, LB2 LB3, ALL, 100)
 ZMK_COMBO(combo_scln, &kp SEMICOLON, LB4 LB3, ALL, 100)
@@ -33,8 +39,8 @@ ZMK_COMBO(combo_opposite_enter, &mo SYM, LM2 LM3, ALL, 100)
 ZMK_LAYER(base,
      &kp SQT    &kp COMMA   &kp DOT      &kp P       &kp Y             &kp F      &kp G       &kp C       &kp R       &kp L
      &kp A      &hrm LALT O &hrm LCTRL E &hrm LGUI U &kp I             &kp D      &hrm RGUI H &hrm RCTL T &hrm LALT N &kp S
-     &kp COLON  &kp Q       &kp J        &kp K       &kp X             &kp B      &kp M       &kp W       &kp V       &kp Z
-                                     &lt NUM FSLH &mt LSHFT BSPC       &lt NAV SPACE  &mt LCTL TAB
+     &uncolon   &kp Q       &kp J        &kp K       &kp X             &kp B      &kp M       &kp W       &kp V       &kp Z
+                                     &lt NUM FSLH &hrm LSHFT BSPC      &lt NAV SPACE  &mt LCTL TAB
 )
 ZMK_LAYER(lower,
      ___        ___        ___        ___        ___                  ___        &kp N7     &kp N8     &kp N9     &kp DEL
