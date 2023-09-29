@@ -6,7 +6,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #include "../zmk-nodefree-config/helper.h"
-#include "../zmk-nodefree-config/keypos_def/keypos_34keys.h"
+#include "../zmk-nodefree-config/keypos_def/keypos_34keys_osprette.h"
 
 #define ___ &trans
 
@@ -14,6 +14,13 @@
 #define NUM  1
 #define NAV  2
 #define SYM  3
+
+#if CONFIG_WIRELESS
+    #include <dt-bindings/zmk/bt.h>
+    #define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
+#else
+    #define _BT_SEL_KEYS_ &trans &trans &trans &trans &trans
+#endif
 
 // homerow mods
 ZMK_BEHAVIOR(hrm, hold_tap,
@@ -57,7 +64,7 @@ ZMK_LAYER(raise,
 ZMK_LAYER(symbols,
                                &kp AT       &kp HASH     &kp DLLR  &kp PRCNT       &kp CARET  &kp AMPS   &kp STAR    &kp LPAR
      &kp EXCL     ___          ___          ___          ___       ___             ___        ___        &key_repeat &kp LBRC  &kp RBRC  &kp RPAR
-                  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 ___       &bt BT_CLR      ___        ___        ___         &kp UNDER &kp QMARK
+                  _BT_SEL_KEYS_                                                     ___        ___        ___         &kp UNDER &kp QMARK
                                                                 ___       ___             &kp EQUAL  ___
 )
 
