@@ -15,6 +15,8 @@
 #define NAV  2
 #define SYM  3
 
+#define CONFIG_WIRELESS 1
+
 #if CONFIG_WIRELESS
     #include <dt-bindings/zmk/bt.h>
     #define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
@@ -64,7 +66,7 @@ ZMK_LAYER(raise,
 ZMK_LAYER(symbols,
                                &kp AT       &kp HASH     &kp DLLR  &kp PRCNT       &kp CARET  &kp AMPS   &kp STAR    &kp LPAR
      &kp EXCL     ___          ___          ___          ___       ___             ___        ___        &key_repeat &kp LBRC  &kp RBRC  &kp RPAR
-                  _BT_SEL_KEYS_                                                     ___        ___        ___         &kp UNDER &kp QMARK
+                                  _BT_SEL_KEYS_                                    ___        ___        ___         &kp UNDER &kp QMARK
                                                                 ___       ___             &kp EQUAL  ___
 )
 
