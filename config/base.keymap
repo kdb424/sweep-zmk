@@ -14,7 +14,6 @@
 #define NAV  2
 #define SYM  3
 
-
 #if CONFIG_WIRELESS
     #include <dt-bindings/zmk/bt.h>
     #define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
@@ -67,27 +66,27 @@ ZMK_COMBO(combo_enter, &lt SYM ENTER, RM2 RM3, ALL, 100)
 ZMK_COMBO(combo_opposite_enter, &mo SYM, LM2 LM3, ALL, 100)
 
 ZMK_LAYER(base,
-                           &kp COMMA   &kp DOT      &kp P       &kp Y             &kp F      &kp G       &kp C       &kp R
-     &kp SQT    &kp A      &hml LALT O &hml LCTRL E &hml LGUI U &kp I             &kp D      &hmr RGUI H &hmr RCTL T &hmr LALT N &kp S       &kp L
-                &uncolon   &kp Q       &kp J        &kp K       &kp X             &kp B      &kp M       &kp W       &kp V       &kp Z
-                                                &lt NUM TAB &cht LSHFT BSPC       &lt NAV SPACE  &mt LCTL FSLH
+     &kp SQT    &kp COMMA   &kp DOT      &kp P       &kp Y             &kp F      &kp G       &kp C       &kp R       &kp L
+     &kp A      &hml LALT O &hml LCTRL E &hml LGUI U &kp I             &kp D      &hmr RGUI H &hmr RCTL T &hmr LALT N &kp S 
+     &uncolon   &kp Q       &kp J        &kp K       &kp X             &kp B      &kp M       &kp W       &kp V       &kp Z
+                                   &lt NUM TAB &cht LSHFT BSPC       &lt NAV SPACE  &mt LCTL FSLH
 )
 ZMK_LAYER(lower,
-                           ___        ___        ___        ___                  ___        &kp N7     &kp N8     &kp N9
-     ___        &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)           &kp PIPE   &kp N4     &kp N5     &kp N6     &kp BSLH     &kp DEL
-                &kp LG(N6) &kp LG(N7) &kp LG(N8) &kp LG(N9) &kp LG(N0)           &kp UNDER  &kp N1     &kp N2     &kp N3     &kp MINUS
-                                                         ___       ___        ___        &kp N0
+     ___        ___        ___        ___        ___                  ___        &kp N7     &kp N8     &kp N9     &kp DEL
+     &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)           &kp PIPE   &kp N4     &kp N5     &kp N6     &kp BSLH
+     &kp LG(N6) &kp LG(N7) &kp LG(N8) &kp LG(N9) &kp LG(N0)           &kp UNDER  &kp N1     &kp N2     &kp N3     &kp MINUS
+                                             ___       ___            ___        &kp N0
 )
 ZMK_LAYER(raise,
-                           &kp F10    &kp F11    &kp F12    ___                  ___        ___        &key_repeat &kp LS(INS)
-     &kp F9     &kp F5     &kp F6     &kp F7     &kp F8     &kp GRAVE            &kp HOME   &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT &kp DEL
-                &kp F1     &kp F2     &kp F3     &kp F4     &kp TILDE            ___        ___        ___         ___         &kp SEMI
-                                                        ___        ___        ___        ___
+     &kp F9     &kp F10    &kp F11    &kp F12    ___                  ___        ___        &key_repeat &kp LS(INS) &kp DEL
+     &kp F5     &kp F6     &kp F7     &kp F8     &kp GRAVE            &kp HOME   &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT
+     &kp F1     &kp F2     &kp F3     &kp F4     &kp TILDE            ___        ___        ___         ___         &kp SEMI
+                                                ___    ___            ___        ___
 )
 ZMK_LAYER(symbols,
-                               &kp AT       &kp HASH     &kp DLLR  &kp PRCNT       &kp CARET  &kp AMPS   &kp STAR    &kp LPAR
-     &kp EXCL     ___          ___          ___          ___       ___             ___        ___        &key_repeat &kp LBRC  &kp RBRC  &kp RPAR
-                                  _BT_SEL_KEYS_                                    ___        ___        ___         &kp UNDER &kp QMARK
-                                                                ___       ___             &kp EQUAL  ___
+     &kp EXCL     &kp AT       &kp HASH     &kp DLLR  &kp PRCNT       &kp CARET  &kp AMPS   &kp STAR    &kp LPAR  &kp RPAR
+     ___          ___          ___          ___       ___             ___        ___        &key_repeat &kp LBRC  &kp RBRC
+                     _BT_SEL_KEYS_                                    ___        ___        ___         &kp UNDER &kp QMARK
+                                            ___       ___             &kp EQUAL  ___
 )
 

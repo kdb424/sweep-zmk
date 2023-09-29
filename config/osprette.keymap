@@ -6,5 +6,8 @@
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
 
+/* use 5-column layout to emulate sweep */
+/ { chosen { zmk,matrix_transform = &sweep_transform; }; };
+
 /* source the main keymap */
 #include "base.keymap"
