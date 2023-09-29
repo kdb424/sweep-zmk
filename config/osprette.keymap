@@ -15,6 +15,7 @@
 #define NAV  2
 #define SYM  3
 
+
 #define CONFIG_WIRELESS 1
 
 #if CONFIG_WIRELESS
@@ -49,6 +50,14 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     hold-trigger-on-release;             // delay positional check until key-release
 )
 
+ZMK_BEHAVIOR(cht, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;
+    global-quick-tap;
+    bindings = <&kp>, <&kp>;
+)
+
 // tap: colon | shft + tap: semicolon
 ZMK_BEHAVIOR(uncolon, mod_morph,
     bindings = <&kp COLON>, <&kp SEMICOLON>;
@@ -65,7 +74,7 @@ ZMK_LAYER(base,
                            &kp COMMA   &kp DOT      &kp P       &kp Y             &kp F      &kp G       &kp C       &kp R
      &kp SQT    &kp A      &hml LALT O &hml LCTRL E &hml LGUI U &kp I             &kp D      &hmr RGUI H &hmr RCTL T &hmr LALT N &kp S       &kp L
                 &uncolon   &kp Q       &kp J        &kp K       &kp X             &kp B      &kp M       &kp W       &kp V       &kp Z
-                                               &lt NUM TAB &mt LSHFT BSPC       &lt NAV SPACE  &mt LCTL FSLH
+                                                &lt NUM TAB &cht LSHFT BSPC       &lt NAV SPACE  &mt LCTL FSLH
 )
 ZMK_LAYER(lower,
                            ___        ___        ___        ___                  ___        &kp N7     &kp N8     &kp N9
