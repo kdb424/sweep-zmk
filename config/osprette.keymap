@@ -1,7 +1,7 @@
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
 
-#include "../zmk-nodefree-config/keypos_def/keypos_34keys_osprette.h"
+#include "../zmk-nodefree-config/keypos_def/keypos_34keys.h"
 
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
