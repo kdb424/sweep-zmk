@@ -85,7 +85,7 @@ ZMK_LAYER(raise,
 )
 ZMK_LAYER(symbols,
      &kp EXCL     &kp AT       &kp HASH     &kp DLLR  &kp PRCNT       &kp CARET  &kp AMPS   &kp STAR    &kp LPAR  &kp RPAR
-     ___          ___          ___          ___       ___             ___        ___        &key_repeat &kp LBRC  &kp RBRC
+     ___          ___          ___          ___       ___             ___        ___        &key_repeat &kp LBKT  &kp RBKT
                      _BT_SEL_KEYS_                                    ___        ___        ___         ___       ___
                                             ___       ___             &kp EQUAL  ___
 )
