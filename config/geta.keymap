@@ -1,0 +1,13 @@
+// Copyright (c) 2022 The ZMK Contributors
+// SPDX-License-Identifier: MIT
+
+#include "../zmk-nodefree-config/keypos_def/keypos_34keys.h"
+
+/* activate bluetooth */
+#define CONFIG_WIRELESS 1
+
+/* use 5-column layout to emulate sweep */
+/ { chosen { zmk,matrix_transform = &sweep_transform; }; };
+
+/* source the main keymap */
+#include "base.keymap"

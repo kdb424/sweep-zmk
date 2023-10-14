@@ -20,3 +20,8 @@ include:
 
   - board: nice_nano
     shield: osprette
+
+  - board: seeeduino_xiao_ble
+    shield: geta_left
+  - board: seeeduino_xiao_ble
+    shield: geta_right
