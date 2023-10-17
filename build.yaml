@@ -25,5 +25,3 @@ include:
     shield: geta_left
   - board: seeeduino_xiao_ble
     shield: geta_right
-  - board: seeeduino_xiao_ble
-    shield: xiao_settings_reset
