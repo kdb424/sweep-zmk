@@ -66,14 +66,14 @@ ZMK_BEHAVIOR(vim_save, macro,
 )
 
 //ZMK_COMBO(name, bindings, keypos, layers, timeout)
-ZMK_COMBO(combo_esc, &kp ESC, LB2 LB3, ALL, 100)
+ZMK_COMBO(combo_esc, &kp ESC, LB2 LB3, BASE, 100)
 ZMK_COMBO(combo_vim_save, &vim_save, LB3 LB4, BASE, 100)
-ZMK_COMBO(combo_launcher, &kp LG(SPACE), RM1 RM2, ALL, 100)
-ZMK_COMBO(combo_terminal, &kp LG(ENTER), RM1 RM2 RM3, ALL, 100)
-ZMK_COMBO(combo_enter, &lt SYM ENTER, RM2 RM3, ALL, 100)
-ZMK_COMBO(combo_opposite_enter, &lt SYM ENTER, LM2 LM3, ALL, 100)
-ZMK_COMBO(combo_splith, &kp LG(H), RM3 RM4, ALL, 100)
-ZMK_COMBO(combo_splitv, &kp LG(V), RB3 RB4, ALL, 100)
+ZMK_COMBO(combo_launcher, &kp LG(SPACE), RB2 RB3, BASE, 100)
+ZMK_COMBO(combo_terminal, &kp LG(ENTER), RM2 RM3, NUM, 100)
+ZMK_COMBO(combo_enter, &lt SYM ENTER, RM2 RM3, BASE, 100)
+ZMK_COMBO(combo_opposite_enter, &lt SYM ENTER, LM2 LM3, BASE, 100)
+ZMK_COMBO(combo_splith, &kp LG(H), RM3 RM4, BASE, 100)
+ZMK_COMBO(combo_splitv, &kp LG(V), RB3 RB4, BASE, 100)
 
 ZMK_LAYER(base,
      &kp SQT    &kp COMMA   &kp DOT      &kp P       &kp Y             &kp F      &kp G       &kp C       &kp R       &kp L
@@ -95,8 +95,8 @@ ZMK_LAYER(nav,
 )
 ZMK_LAYER(sym,
      &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT            &kp CARET  &kp AMPS   &kp STAR    &kp LPAR  &kp RPAR
-     ___        ___        ___        ___        ___                  &kp PIPE   ___        &key_repeat &kp LBKT  &kp RBKT
+     ___        ___        ___        ___        ___                  &kp PIPE   ___        ___         &kp LBKT  &kp RBKT
                    _BT_SEL_KEYS_                                      &kp UNDER  ___        ___         &kp LBRC  &kp RBRC
-                                      ___        ___                  &kp EQUAL  ___
+                                      ___        ___                  &kp EQUAL  &kp PLUS
 )
 
