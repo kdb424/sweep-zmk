@@ -6,3 +6,7 @@ url: https://github.com/smores56/geta
 requires: [seeed_xiao]
 features:
   - keys
+siblings:
+  - geta_left
+  - geta_right
+  - geta_dongle

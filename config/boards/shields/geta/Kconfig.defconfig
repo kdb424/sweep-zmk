@@ -1,7 +1,7 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_GETA_LEFT
+if SHIELD_GETA_DONGLE
 
 config ZMK_KEYBOARD_NAME
     default "Geta"
@@ -9,11 +9,16 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config ZMK_USB
+    default y
+
 endif
 
-if SHIELD_GETA
+if SHIELD_GETA_LEFT || SHIELD_GETA_RIGHT || SHIELD_GETA_DONGLE
 
 config ZMK_SPLIT
     default y
 
+config ZMK_BLE
+    default y
 endif
