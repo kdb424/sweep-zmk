@@ -89,7 +89,7 @@ ZMK_LAYER(game,
      &kp SQT    &kp COMMA  &kp DOT &kp P   &kp Y                      &kp F      &kp G       &kp C       &kp R       &kp L
      &kp A      &kp O      &kp E   &kp U   &kp I                      &kp D      &hmr RGUI H &hmr RCTL T &hmr LALT N &kp S
      &kp SEMI   &kp Q      &kp J   &kp K   &kp X                      &kp B      &kp M       &kp W       &kp V       &kp Z
-                           X_LH    &kp TAB &kp LSHFT                  &lt NAV SPACE  &mt LCTL FSLH  X_RH
+                           X_LH   &kp LCTL &kp LSHFT                  &tog GAME  &mt LCTL FSLH  X_RH
 )
 ZMK_LAYER(num,
      ___        ___        ___        ___        ___                  ___        &kp N7     &kp N8     &kp N9     &kp DEL
