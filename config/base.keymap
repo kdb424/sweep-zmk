@@ -13,10 +13,11 @@
 #define XXX &none
 
 #define BASE 0
-#define GAME 1
-#define NUM  2
-#define NAV  3
-#define SYM  4
+#define FOCAL 1
+#define GAME 2
+#define NUM  3
+#define NAV  4
+#define SYM  5
 
 #if CONFIG_WIRELESS
     #include <dt-bindings/zmk/bt.h>
@@ -74,19 +75,26 @@ ZMK_BEHAVIOR(vim_save, macro,
 #define COMBO_HOOK require-prior-idle-ms = <20>;
 
 //ZMK_COMBO(name, bindings, keypos, layers, timeout)
-ZMK_COMBO(combo_esc, &kp ESC, LB2 LB3, BASE GAME, 100)
-ZMK_COMBO(combo_vim_save, &vim_save, LB3 LB4, BASE, 100)
-ZMK_COMBO(combo_launcher, &kp LG(SPACE), RB2 RB3, BASE, 100)
+ZMK_COMBO(combo_esc, &kp ESC, LB2 LB3, BASE GAME FOCAL, 100)
+ZMK_COMBO(combo_vim_save, &vim_save, LB3 LB4, BASE FOCAL, 100)
+ZMK_COMBO(combo_launcher, &kp LG(SPACE), RB2 RB3, BASE FOCAL, 100)
+ZMK_COMBO(combo_enter, &lt SYM ENTER, RM2 RM3, BASE GAME FOCAL, 100)
+ZMK_COMBO(combo_opposite_enter, &lt SYM ENTER, LM2 LM3, BASE FOCAL, 100)
+ZMK_COMBO(combo_splith, &kp LG(H), RM3 RM4, BASE FOCAL, 100)
+ZMK_COMBO(combo_splitv, &kp LG(V), RB3 RB4, BASE FOCAL, 100)
+
 ZMK_COMBO(combo_terminal, &kp LG(ENTER), RM2 RM3, NUM, 100)
-ZMK_COMBO(combo_enter, &lt SYM ENTER, RM2 RM3, BASE GAME, 100)
-ZMK_COMBO(combo_opposite_enter, &lt SYM ENTER, LM2 LM3, BASE, 100)
-ZMK_COMBO(combo_splith, &kp LG(H), RM3 RM4, BASE, 100)
-ZMK_COMBO(combo_splitv, &kp LG(V), RB3 RB4, BASE, 100)
 
 ZMK_LAYER(base,
      &kp SQT    &kp COMMA   &kp DOT      &kp P       &kp Y             &kp F      &kp G       &kp C       &kp R       &kp L
      &kp A      &hml LALT O &hml LCTRL E &hml LGUI U &kp I             &kp D      &hmr RGUI H &hmr RCTL T &hmr LALT N &kp S 
      &uncolon   &kp Q       &kp J        &kp K       &kp X             &kp B      &kp M       &kp W       &kp V       &kp Z
+                            X_LH   &lt NUM TAB &cht LSHFT BSPC         &lt NAV SPACE  &mt LCTL FSLH  X_RH
+)
+ZMK_LAYER(focal,
+     &kp V      &kp L       &kp H        &kp G       &kp K             &kp Q      &kp F       &kp O       &kp U       &kp J
+     &kp S      &hml LALT R &hml LCTRL N &hml LGUI T &kp B             &kp Y      &hmr RGUI C &hmr RCTL A &hmr LALT E &kp I 
+     &kp Z      &kp X       &kp M        &kp D       &kp P             &kp SQT    &kp W       &kp DOT     &uncolon    &kp COMMA
                             X_LH   &lt NUM TAB &cht LSHFT BSPC         &lt NAV SPACE  &mt LCTL FSLH  X_RH
 )
 ZMK_LAYER(game,
@@ -111,6 +119,6 @@ ZMK_LAYER(sym,
      &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT            &kp CARET  &kp AMPS   &kp STAR    &kp LPAR  &kp RPAR
      ___        ___        ___        ___        &ext_power EP_ON     &kp PIPE   ___        ___         &kp LBKT  &kp RBKT
                    _BT_SEL_KEYS_                                      &kp UNDER  ___        ___         &kp LBRC  &kp RBRC
-                            X_LH      ___        ___                  &kp EQUAL  &kp PLUS   X_RH
+                            X_LH      &tog FOCAL &tog GAME            &kp EQUAL  &kp PLUS   X_RH
 )
 
